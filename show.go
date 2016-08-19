@@ -388,7 +388,7 @@ var statsTmpl = template.Must(template.New("").Funcs(map[string]interface{}{
 // can't be determined, it returns the the name of the window.
 func appID(w *Window) string {
 	if w == nil {
-		return "(oops)"
+		return "(nil)"
 	}
 	if w.Info().App != "" {
 		return w.Info().App
